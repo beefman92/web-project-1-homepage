@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>Homepage Demo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https://github.com/kimmobrunfeldt/progressbar.js/blob/master/dist/progressbar.js"></script>
+<script src="js/main-page.js"></script>
+<div id="info"></div>
+<nav id="navBar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="index.html">Zhao Yibo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItemList" aria-controls="navbarItemList" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarItemList">
+        <ul id="nav-item-list" class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#aboutMe">About Me<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#experiences">Experiences</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+            </li>
+        </ul>
+        <div id="state-display">
+            <form id="special-id-form" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Special id " aria-label="special id" name="special-id"
+                       pattern="[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}">
+                <button id="submit-button" class="btn btn-success my-2 my-sm-0" type="submit" data-toggle="popover" data-placement="bottom"
+                        data-trigger="focus" title="Failed" data-content="Special id validation failed. ">Submit</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!--about-me section-->
+<div id="aboutMe" class="part">
+    <div class="container bg-white">
+        <div class="row mt-7">
+            <div class="col-lg-12 mt-4 text-center" data-aos="flip-up">
+                <h1>About Me</h1>
+            </div>
+        </div>
+        <div class="row mt-3 mb-5">
+            <div class="col-lg-1 mb-5"></div>
+            <div class="col-lg-3 mb-5" data-aos="fade-right"><img src="imgs/zhao_yibo.jpg" style="width: 300px; border-radius: 50%" alt="profile photo"></div>
+            <div class="col-lg-7 mb-5">
+                <h3 data-aos="fade-down">Zhao Yibo</h3>
+                <h5 data-aos="fade-down">Big Data Engineer</h5>
+                <div class="dropdown-divider" data-aos="fade-down"></div>
+                <ul data-aos="fade-left">
+                    <li>I am a master student majoring Computer Science at Khoury College of Computer and Information Sciences, Northeastern University.</li>
+                    <li>I got my bachelor degree from Peking University in 2015. During university, I majored in the Intelligence Science and Technology.
+                        Besides that, I also chose the Philosophy as my second major which mainly taught me that I am not good at philosophy😂.</li>
+                    <li>After graduation, I joined Datapps Co.,Ltd. which focuses on advanced applications and technologies in the area of big data.
+                        Three-year work experience has trained me to become a good big data engineer.</li>
+                    <li>My interest are Hadoop stack, Spark and database system. As a fan of video games, I am also interested in technology about
+                        video game design and development.</li>
+                </ul>
+                <div data-aos="fade-up">
+                    <a href="mailto:yibo.zhao1003@outlook.com" target="_blank"><img class="contact-icons" src="imgs/about-me-icons/mail.svg" alt="e-mail"></a>
+                    <a href="https://www.linkedin.com/in/yibo-zhao-885b48a6/" target="_blank"><img class="contact-icons" src="imgs/about-me-icons/linkedin.svg" alt="linkedin homepage"></a>
+                    <a href="https://github.com/beefman92" target="_blank"><img class="contact-icons" src="imgs/about-me-icons/github.svg" alt="github homepage"></a>
+                    <a href="https://steamcommunity.com/profiles/76561198099814183/" target="_blank"><img class="contact-icons" style="width: 30px" src="imgs/about-me-icons/steam.svg" alt="steam homepage"></a>
+                    <a href="https://www.facebook.com/yibo.zhao.71" target="_blank"><img class="contact-icons" src="imgs/about-me-icons/facebook.svg" alt="facebook homepage"></a>
+                    <a href="https://twitter.com/ZhaoYibo6" target="_blank"><img class="contact-icons" src="imgs/about-me-icons/twitter.svg" alt="twitter homepage"></a>
+                </div>
+            </div>
+            <div class="col-lg-1 mb-5"></div>
+        </div>
+    </div>
+</div>
+
+<!--education section-->
+<div id="education" class="part">
+    <div class="container bg-white">
+        <div class="row mt-5">
+            <div class="col-lg-12 text-center mt-4" data-aos="flip-up">
+                <h1>Education</h1>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-lg-5 text-right" data-aos="fade-right">
+                <img class="school-badge" src="imgs/neu_seal.png">
+            </div>
+            <div class="col-lg-5 rounded" data-aos="fade-left">
+                <h3>Northeastern University</h3>
+                <div class="dropdown-divider"></div>
+                <div class="my-0">
+                    <p>Major: Computer Science</p>
+                    <p>September 2019 - Now</p>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-lg-5 text-right mb-5" data-aos="fade-right">
+                <img class="school-badge" src="imgs/pku_seal.png">
+            </div>
+            <div class="col-lg-5 rounded  mb-5" data-aos="fade-left">
+                <h3>Peking University</h3>
+                <div class="dropdown-divider"></div>
+                <div class="my-0">
+                    <p>Major: Intelligence Science and Technology</p>
+                    <p>September 2011 - July 2015</p>
+                    <p>GPA: 3.41/4.00</p>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="my-0">
+                    <p>Double Major: Philosophy</p>
+                    <p>September 2013 - July 2015</p>
+                    <p>GPA: 3.14/4.00</p>
+                </div>
+            </div>
+            <div class="col-lg-2  mb-5"></div>
+        </div>
+    </div>
+</div>
+
+<!--experiences section-->
+<div id="experiences" class="part">
+    <div class="container bg-white">
+        <div class="row my-5">
+            <div class="col-lg-12 text-center mt-4" data-aos="flip-up">
+                <h1>Experiences</h1>
+            </div>
+        </div>
+
+        <div class="row mt-5 mb-2">
+            <div class="col-lg-2 text-right" data-aos="fade-right">
+                <img src="imgs/company-icons/datapps-log.png" style="width: 50%" alt="Datapps logo">
+            </div>
+            <div class="col-lg-7 rounded" data-aos="fade-up">
+                <h3>Datapps Co.,Ltd.</h3>
+            </div>
+            <div class="col-lg-1" data-aos="fade-up">Full Time</div>
+            <div class="col-lg-2 text-right" data-aos="fade-left">2015.07-2018.11</div>
+        </div>
+        <!--job title-->
+        <div class="row mt-2">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 rounded" data-aos="fade-up">
+                <h5>Big Data Engineer, Development Department</h5>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8"><div class="dropdown-divider" data-aos="fade-up"></div></div>
+            <div class="col-lg-2"></div>
+        </div>
+        <!--job details-->
+        <div class="row my-2">
+            <div class="col-lg-2">
+            </div>
+            <div class="col-lg-8 rounded">
+                <ul>
+                    <li class="my-2" data-aos="fade-up">Developed a big data analysis platform based on Hadoop, and mainly focused on encapsulating the functionality of DataFrame, RDD, and mllib to build visual analysis tools and tuning Spark.</li>
+                    <li class="my-2" data-aos="fade-up">Optimized performance of join and star join operation in DataFrame with MapDB, optimized performance and applicability of cost-based optimization (CBO) of DataFrame, and implemented and
+                        optimized interaction between Spark and HBase using spark hbase connector. Researched the source code of Spark about job scheduling and task execution, data source, and logical plans. </li>
+                    <li class="my-2" data-aos="fade-up">Developed and maintained big data analysis platforms and task scheduler system based on Hadoop for China Mobile Guangdong Company and China Mobile Beijing Company.</li>
+                    <li class="my-2" data-aos="fade-up">Joined the database development team of LinkoopDB. Implemented the functionality of database link which enables LinkoopDB to retrieve, update and manage other database systems’ metadata
+                        and data. Developed the alpha version of stored procedure engine which is basically compatible with the syntax of Teradata’s stored procedure. Extended the function of parser and engine
+                        of LinkoopDB to support window clause, window functions and OLAP functions.</li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <img class="my-3" src="imgs/skills-icons/hadoop-logo.jpg" style="width: 100%" alt="Hadoop logo" data-aos="fade-up">
+                <img class="my-3" src="imgs/skills-icons/spark-logo.png" style="width: 80%" alt="Spark log" data-aos="fade-up">
+                <img class="my-5" src="imgs/skills-icons/sql-logo.png" style="width: 70%" alt="SQL logo" data-aos="fade-up">
+            </div>
+        </div>
+
+        <!--job title-->
+        <div class="row mt-2">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 rounded" data-aos="fade-up">
+                <h5>Web Server Engineer, Development Department</h5>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8"><div class="dropdown-divider" data-aos="fade-up"></div></div>
+            <div class="col-lg-2"></div>
+        </div>
+        <!--job details-->
+        <div class="row mt-2 mb-5">
+            <div class="col-lg-2">
+            </div>
+            <div class="col-lg-8 rounded">
+                <ul>
+                    <li class="my-2" data-aos="fade-up">Built web server based on Spring with Solr as storage module, and designed RESTful API.</li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <img src="imgs/skills-icons/spring-logo.png" style="width: 100%" alt="Spring logo" data-aos="fade-up">
+            </div>
+        </div>
+
+
+        <div class="row mt-5 mb-2">
+            <div class="col-lg-2 text-right" data-aos="fade-right">
+                <img src="imgs/company-icons/netease-games-logo.png" style="width: 50%" alt="Netease Games logo">
+            </div>
+            <div class="col-lg-7 rounded" data-aos="fade-up">
+                <h3>NetEase Games</h3>
+            </div>
+            <div class="col-lg-1" data-aos="fade-up">Summer Intern</div>
+            <div class="col-lg-2 text-right" data-aos="fade-left">2014.07-2014.09</div>
+        </div>
+        <!--job title-->
+        <div class="row mt-2">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 rounded" data-aos="fade-up">
+                <h5>Game Designing Intern, F Studio</h5>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8"><div class="dropdown-divider" data-aos="fade-up"></div></div>
+            <div class="col-lg-2"></div>
+        </div>
+        <!--job details-->
+        <div class="row my-2">
+            <div class="col-lg-2  mb-5">
+            </div>
+            <div class="col-lg-8 rounded  mb-5">
+                <ul>
+                    <li class="my-2" data-aos="fade-up">Participated in the development of a FPS Game, Crisis 2015; analyzed the maps of regimental combats, such as Dust 2 and Aztec, and designed a regimental map;
+                        created the settings, background stories and skills of a new hero; developed a solo raid in the game.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--skills section-->
+<div id="skills" class="part">
+    <div class="container bg-white">
+        <!--Section Header-->
+        <div class="row mt-5">
+            <div class="col-lg-12 text-center mt-4" data-aos="flip-up">
+                <h1>Skills</h1>
+            </div>
+        </div>
+
+        <!--big data section-->
+        <div class="row mt-7 mb-5">
+            <div class="col-lg-2 text-right" data-aos="fade-right"><h3>Big Data</h3></div>
+            <div class="col-lg-3 mx-2 text-center" data-aos="fade-left">
+                <img src="imgs/skills-icons/java-original.svg" style="height: 100px" alt="">
+            </div>
+            <div class="col-lg-3 mx-2  text-center" data-aos="fade-left">
+                <img src="imgs/skills-icons/hive-logo.png" style="height: 100px;" alt="">
+            </div>
+            <div class="col-lg-3 mx-2  text-center" data-aos="fade-left">
+                <img src="imgs/skills-icons/spark-logo.png" style="height: 100px" alt="">
+            </div>
+        </div>
+        <div class="row my-5" data-aos="fade-left">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-3 text-center"><img src="imgs/skills-icons/hbase-logo.png" style="width: 255px" alt=""></div>
+            <div class="col-lg-3 text-center"><img src="imgs/skills-icons/hadoop-logo.jpg" style="width: 255px" alt=""></div>
+            <div class="col-lg-3 text-center"><img src="imgs/skills-icons/sql-logo.png" style="height: 100px" alt=""></div>
+        </div>
+        <div class="row mt-5 mb-7" data-aos="fade-left">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-3 text-center"><img src="imgs/skills-icons/scala-logo.png" style="height: 100px" alt=""></div>
+        </div>
+
+        <!--web development section-->
+        <div class="row mt-7 mb-5">
+            <div class="col-lg-2 text-right" data-aos="fade-right"><h3>Web Development</h3></div>
+            <div class="col-lg-3 mx-2 text-center" data-aos="fade-left">
+                <img src="imgs/skills-icons/html5-css3-logo.png" style="height: 100px" alt="">
+            </div>
+            <div class="col-lg-3 mx-2  text-center" data-aos="fade-left">
+                <img src="imgs/skills-icons/javascript-logo.png" style="height: 100px;" alt="">
+            </div>
+            <div class="col-lg-3 mx-2  text-center" data-aos="fade-left">
+                <img src="imgs/skills-icons/php-logo.png" style="height: 100px" alt="">
+            </div>
+
+        </div>
+        <div class="row mt-5 mb-7" data-aos="fade-left">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-3 text-center">
+                <img src="imgs/skills-icons/spring-logo.png" style="width: 255px" alt="">
+            </div>
+            <div class="col-lg-3 text-center">
+                <img src="imgs/skills-icons/nodejs-logo.png" style="height: 100px" alt="">
+            </div>
+        </div>
+
+        <!--other sections-->
+        <div class="row my-7">
+            <div class="col-lg-2 text-right mb-5" data-aos="fade-right"><h3>Others</h3></div>
+            <div class="col-lg-3 text-center mb-5" data-aos="fade-left"><img src="imgs/skills-icons/c-plus-plus.png" style="height: 100px" alt=""></div>
+            <div class="col-lg-3 text-center mb-5" data-aos="fade-left"><img src="imgs/skills-icons/python-logo.png" style="height: 100px" alt=""></div>
+            <div class="col-lg-3 text-center mb-5" data-aos="fade-left"><img src="imgs/skills-icons/racket-logo.svg" style="height: 100px" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="secretBulletin" tabindex="-1" role="dialog" aria-labelledby="secretBulletinTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="secretBulletinTitle">Hidden Mode is ON!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Congratulations. You've found the cheat codes of my homepage. Now, I unlock the leaving messages so that you can leave a message to me.
+                This is your special id <strong><span id="special-id"></span></strong>. Next time when you visit my homepage, you could enter
+                this id to unlock the hidden mode. Enjoy it.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration:2000
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>Homepage Demo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="js/main-page.js"></script>
+<script src="js/leave-messages.js"></script>
+<div id="info"></div>
+<nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Zhao Yibo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItemList" aria-controls="navbarItemList" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarItemList">
+        <ul id="nav-item-list" class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="about-me.html">About Me<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <div id="state-display">
+            <form id="special-id-form" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Special id " aria-label="special id" name="special-id"
+                       pattern="[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}">
+                <button id="submit-button" class="btn btn-success my-2 my-sm-0" type="submit" data-toggle="popover" data-placement="bottom"
+                        data-trigger="focus" title="Failed" data-content="Special id validation failed. ">Submit</button>
+            </form>
+        </div>
+
+    </div>
+</nav>
+
+<div id="leaveMessages" class="part">
+    <div class="container bg-white">
+        <div class="row mt-7">
+            <div class="col-lg-3 my-5"></div>
+            <div class="col-lg-6 my-5 bg-white text-center" data-aos="flip-up">
+                <h1>Leave Messages</h1>
+            </div>
+            <div class="col-lg-3 my-5"></div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 mb-5" data-aos="fade-up">
+                <form id="leaveMessagesForm">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" aria-describedby="titleHelp" placeholder="Enter Title" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" placeholder="Do you have any message for me? " name="message" row="10"></textarea>
+                    </div>
+                    <button id="submitFormButton" type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="secretBulletin" tabindex="-1" role="dialog" aria-labelledby="secretBulletinTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="secretBulletinTitle">Hidden Mode is ON!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Congratulations. You've found the cheat codes of my homepage. Now, I unlock the leaving messages so that you can leave a message to me.
+                This is your special id <strong><span id="special-id"></span></strong>. Next time when you visit my homepage, you could enter
+                this id to unlock the hidden mode. Enjoy it.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="submitSucceededInfo" tabindex="-1" role="dialog" aria-labelledby="submitSucceededInfoTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="submitSucceededInfoTitle">Submission succeeded!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Thanks for you feedback!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="submitFailedInfo" tabindex="-1" role="dialog" aria-labelledby="submitFailedInfoTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="submitFailedInfoTitle">Submission failed!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Oops...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
