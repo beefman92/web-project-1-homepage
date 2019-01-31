@@ -10,7 +10,7 @@ html, body {
 }
 
 #introduction {
-    width: 300px;
+    width: 400px;
     height: 300px;
     padding: 1rem 1rem 1rem 1rem;
     position: absolute;
@@ -20,12 +20,12 @@ html, body {
 
 #profilePhoto {
     position: absolute;
-    left: 300px;
+    left: 400px;
     top: 0px;
 }
 
 #trademark {
-    width: 512px;
+    width: 612px;
     height: 100px;
     padding: 1rem 1rem 1rem 1rem;
     position: absolute;
