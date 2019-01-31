@@ -38,9 +38,10 @@ During development, I utilized following libs, plugins and frameworks:
 
 ## Installation
 install java (JDK 1.8 required)  
-download jar
+download homepage-1.0.jar
 ```shell
-java -jar xxxx com.my.webdev.project.homepage.Server
+# web server will listen to port 8080
+java -jar homepage-1.0.jar com.my.webdev.project.homepage.Server
 ```
 visit website
 
