@@ -15,6 +15,18 @@ I also add function of leaving message which requires support of server end prog
 * leaving message (Only for login user)
 * login
 
+## Project Structure
+
+| Path | Content |
+| ---- | ----- |
+| readme-file | Files in this directory are pictures used in this README.md |
+| src/main/java | Java codes of server end program |
+| src/main/resources/static/*.html | Pages of my website|
+| src/main/resources/static/audio | Audio files |
+| src/main/resources/static/css | CSS files |
+| src/main/resources/static/imgs | Image files |
+| src/main/resources/static/js | Javascript files |
+
 ## Screenshots
 index page
 ![a](readme-file/index-page.png)
@@ -37,13 +49,14 @@ During development, I utilized following libs, plugins and frameworks:
 * [Spring](https://spring.io/)
 
 ## Installation
-install java (JDK 1.8 required)  
-download homepage-1.0.jar
+[Install java](https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/) (JDK 1.8 required)  
+Download [homepage-1.0.jar](https://github.com/beefman92/web-project-1-homepage/releases/tag/v0.1)
+Execute following command
 ```shell
 # web server will listen to port 8080
 java -jar homepage-1.0.jar com.my.webdev.project.homepage.Server
 ```
-visit website
+Visit website
 
 ## Course
 [CS 5610 - Web Development](http://johnguerra.co/classes/webDevelopment_spring_2019/)
